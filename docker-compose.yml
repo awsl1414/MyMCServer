@@ -1,0 +1,16 @@
+
+services:
+  minecraft-server:
+    image: my-minecraft-server:latest
+    container_name: my-minecraft-server
+    restart: unless-stopped
+    ports:
+      - "${SERVER_PORT:-25565}:25565"
+    volumes:
+      - ./minecraft:/minecraft
+      - ./youer-1.21.1.jar:/server/server.jar
+      - ./scripts:/scripts
+    environment:
+      - JAVA_OPTS=${JAVA_OPTS:--Xms2G -Xmx4G}
+    stdin_open: true
+    tty: true
