@@ -31,8 +31,5 @@ Thumbs.db
 node_modules/
 .cache/
 
-# Minecraft 文件夹
-minecraft/
-
 # 服务器JAR文件（根据需要取消注释）
 *.jar

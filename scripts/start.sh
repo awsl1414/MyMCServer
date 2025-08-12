@@ -7,4 +7,5 @@ JAVA_OPTS="-Xms2G -Xmx4G -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPause
 echo "正在启动 Minecraft 服务器..."
 echo "Java 参数: $JAVA_OPTS"
 
-java $JAVA_OPTS -jar server.jar --nogui
+cd /minecraft
+java $JAVA_OPTS -jar /server/server.jar --nogui
