@@ -1,0 +1,38 @@
+# Docker 相关文件
+.dockerignore
+
+# 备份文件
+backups/
+*.tar.gz
+*.zip
+
+# 日志文件
+*.log
+
+# 临时文件
+*.tmp
+*.temp
+
+# IDE 文件
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 环境变量文件
+.env
+.env.local
+
+# 构建缓存
+node_modules/
+.cache/
+
+# Minecraft 文件夹
+minecraft/
+
+# 服务器JAR文件（根据需要取消注释）
+*.jar

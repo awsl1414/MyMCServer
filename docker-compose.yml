@@ -1,0 +1,26 @@
+
+
+services:
+  minecraft-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        JAVA_VERSION: ${JAVA_VERSION:-21}
+    container_name: my-minecraft-server
+    restart: unless-stopped
+    ports:
+      - "${SERVER_PORT:-25565}:25565"
+    volumes:
+      - ./minecraft:/minecraft
+    environment:
+      - JAVA_OPTS=${JAVA_OPTS:--Xms2G -Xmx4G}
+      - JAVA_VERSION=${JAVA_VERSION:-21}
+    stdin_open: true
+    tty: true
+    networks:
+      - minecraft-network
+
+networks:
+  minecraft-network:
+    driver: bridge
