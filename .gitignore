@@ -33,3 +33,7 @@ node_modules/
 
 # 服务器JAR文件（根据需要取消注释）
 *.jar
+
+# 只保留 eula.txt
+minecraft/
+!minecraft/eula.txt

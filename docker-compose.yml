@@ -7,10 +7,10 @@ services:
     ports:
       - "${SERVER_PORT:-25565}:25565"
     volumes:
-      # - ./minecraft:/minecraft
+      - ./minecraft:/minecraft
       - ./server.jar:/server/server.jar
       - ./scripts:/scripts
-    environment:
-      - JAVA_OPTS=${JAVA_OPTS:--Xms2G -Xmx4G}
+    env_file:
+      - .env
     stdin_open: true
     tty: true
